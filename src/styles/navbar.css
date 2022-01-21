@@ -1,0 +1,29 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+.navigation {
+  padding-right: var(--xxl);
+}
+
+.navigation ul {
+  padding: var(--sm);
+  padding-right: var(--xl);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation ul li {
+  padding-left: var(--md);
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: var(--base-white);
+  text-transform: uppercase;
+  font-size: var(--sm);
+  font-weight: 600;
+}

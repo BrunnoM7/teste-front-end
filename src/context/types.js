@@ -1,0 +1,7 @@
+export const GET_MENU = 'GET_MENU'
+export const ADD_MENU_ITEM = 'ADD_MENU_ITEM'
+// export const UPDATE_MENU_ITEM = 'UPDATE_MENU_ITEM'
+// export const DELETE_MENU_ITEM = 'DELETE_MENU_ITEM'
+// export const SET_LOADING = 'SET_LOADING'
+// export const SET_CURRENT = 'SET_CURRENT'
+// export const CLEAR_CURRENT = 'CLEAR_CURRENT'

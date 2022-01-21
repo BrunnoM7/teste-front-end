@@ -1,0 +1,19 @@
+
+.container {
+  max-width: 80rem; /* 1280px */
+  margin: var(--md) auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+  .flex-sm {
+    display: flex;
+  }
+}
+
