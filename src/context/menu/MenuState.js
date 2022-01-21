@@ -38,10 +38,9 @@ const MenuState = props => {
       console.log(error);
     }
   }
-  // add menu item
-
 
   // TODO:
+  // add menu item
   // update menu item
   // delete menu item
   // set loading

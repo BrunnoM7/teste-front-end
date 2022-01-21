@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Cardápio online
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O projeto foi iniciado utilizando o boilerplate `create-react-app` porém nem todos pacotes disponibilizados foram utilizados, dessa forma alguns desses foram removidos entre esses os destinados a testes e monitoramento.
 
-## Available Scripts
+## Para rodar o projeto
 
-In the project directory, you can run:
+No diretório do projeto:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Roda ele localmente no endereço [http://localhost:3000](http://localhost:3000).
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Opção de build para deploy.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Sobre a estrutura
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Pensando na escalabilidade e pegando alguma inspiração dos conceitos de `Atomic Design`, a estrutura de pastas do projeto foi feita pensando em separar responsabilidades, pensando `components` como pequenas unidades que são utilizadas para montar as páginas do projeto, separadas em `pages`.
 
-### `npm run eject`
+Para além disso, as folhas de estilo foram separadas em `styles` e organizadas em arquivos semanticamente nomeados para facilitar a manutenção e implementação de novos estilos. Os valores básicos utilizados ao longo da folha de estilos foram extraídos em variáveis no arquivo `variables.css`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+O controle de estados e comunicação com a API, foi feito utilizando a `ContextAPI` do React e com a criação de um `api service` local utilizando `axios`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Melhorias e alterações para próximas atualizações
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Já pensando na implementação de novas funcionalidades e interações com a API, os tipos utilizados pela ContextAPI já foram todos definidos no arquivo `types.js` estando todos comentados, excessão a `GET_MENU` que está funcional no momento.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Outro placeholder que o projeto possui é a página de edição de items do cardápio. A ideia é que com essa página e suas funcionalidades finalizadas seja possível controlar completamente os items do cardápio. Bem como a adição de novas categorias para esses items povoar (levando em consideração a estrutura de dado fornecida pela API).
 
-## Learn More
+Outras melhorias que colocaria no pipeline e desenvolvimento dessa aplicação:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- finalização de form de adição e edição (mencionada)
+- implementação de lazy loading no carregamento do menu para assegurar uma melhor experiência do usuário.
+- Criação de modal para exibição de mais detalhes sobre um item selecionado
+- Campo de busca para facilitar a filtragem dos items
